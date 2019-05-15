@@ -16,7 +16,7 @@ martini = Cocktail.create(name: "lemon martini")
 Cocktail.create(name: "black ice")
 Cocktail.create(name: "bahama mama")
 
-Doses.create(description: "lemon and soda", cocktail: martini, ingredient: Ingredient.first )
+Dose.create(description: "lemon and soda", cocktail: martini, ingredient: Ingredient.first )
 
 
 # This file should contain all the record creation needed to seed the database with its default values.
