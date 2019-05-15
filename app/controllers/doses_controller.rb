@@ -14,9 +14,9 @@ class DosesController < ApplicationController
   end
 
   def create
-    @dose = Dose.new(doses_params)
-    if @doses.save
-      redirect_to doses_path(@doses)
+    @dose = Dose.new(dose_params)
+    if @dose.save
+      redirect_to dose_path(@dose)
     else
       render :new
     end
@@ -29,7 +29,7 @@ class DosesController < ApplicationController
 
   def update
     if @dose.update(dose_params)
-      redirect_to doses_path
+      redirect_to dose_path
     else
       render :new
     end
@@ -38,6 +38,6 @@ class DosesController < ApplicationController
   private
 
   def dose_params
-    params.require(:dose).permit(:ingredient)
+    params.require(:dose).permit(:description, :ingredient_id)
   end
 end
